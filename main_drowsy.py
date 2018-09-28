@@ -82,9 +82,10 @@ while True:
     else:
       continuous_counter = 0
     
-    cv2.putText(frame, "Blinks count: {}".format(TOTAL), (10, 30), cv2.FONT_ITALIC, 0.6, (0, 255, 0), 2)
-    cv2.putText(frame, "Aspect ratio: {:.2f}".format(ear), (300, 30), cv2.FONT_ITALIC, 0.6, (0, 255, 0), 2)
-    cv2.putText(frame, "DANGER!!: {:.2f}".format(danger), (10, 90), cv2.FONT_ITALIC, 0.6, (0, 255, 0), 2)
+    cv2.putText(frame, "Blinks count: {}".format(TOTAL), (10, 30), cv2.FONT_ITALIC, 0.7, (0, 255, 0), 2)
+    cv2.putText(frame, "DANGER!!: {:.2f}".format(danger), (10, 90), cv2.FONT_ITALIC, 0.7, (0, 255, 0), 2)
+    cv2.putText(frame, "Aspect ratio: {:.2f}".format(ear), (300, 30), cv2.FONT_ITALIC, 0.7, (0, 255, 0), 2)
+
     break
 
   cv2.imshow("Frame", frame)

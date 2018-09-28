@@ -4,7 +4,9 @@ from imutils import face_utils
 import argparse
 import imutils
 import dlib
+import sys
 import cv2
+import time
 
 def eye_aspect_ratio(eye):
   A = distance.euclidean(eye[1], eye[5])
@@ -71,11 +73,12 @@ while True:
     cv2.drawContours(frame, [rightEyeHull],  -1, (0, 255, 0), 1)
                                                   
     if (leftEAR < EYE_AR_THRESH - 0.12 and rightEAR < EYE_AR_THRESH - 0.12):
-      print("Both Eyes Blinked")
       continuous_counter = continuous_counter + 1
       if(continuous_counter>5):
         danger = 1
-        print("Danger")
+        print("1")
+        time.sleep(2)
+        sys.exit(0)
       COUNTER += 1
       TOTAL += 1    
       prevcount = COUNTER
@@ -85,7 +88,7 @@ while True:
     
     cv2.putText(frame, "Blinks count: {}".format(TOTAL), (10, 30), cv2.FONT_ITALIC, 0.7, (0, 255, 0), 2)
     cv2.putText(frame, "DANGER!!: {:.2f}".format(danger), (10, 90), cv2.FONT_ITALIC, 0.7, (0, 255, 0), 2)
-    cv2.putText(frame, "Aspect ratio: {:.2f}".format(ear), (300, 30), cv2.FONT_ITALIC, 0.7, (0, 255, 0), 2)
+    cv2.putText(frame, "Aspect ratio: {:.2f}".format(ear), (250, 30), cv2.FONT_ITALIC, 0.7, (0, 255, 0), 2)
 
     break
 

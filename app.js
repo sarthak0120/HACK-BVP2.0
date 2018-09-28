@@ -24,14 +24,13 @@ app.post('/k', function(req, res) {
   args: ['-p','shape_predictor_68_face_landmarks.dat']
 };
 
-PythonShell.run('main_drowsy.py', options, function (err, message) {
-    if(err)
-      throw err;
+var shell = new PythonShell('main_drowsy.py', options);
+shell.on('message', function (message) {
     console.log(message);
     if(message=='1')
     {
         //alarm'
-        res.send("OH LOL!");
+       console.log("OH LOL!");
     }
  // res.render("result", {message: message, claim: claim, says:says});
 // console.log("hii");

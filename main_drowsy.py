@@ -6,10 +6,6 @@ import argparse
 import imutils
 import dlib
 import cv2
-import time
-import math
-from datetime import datetime, date
-
 
 # Detect Blinks
 
@@ -21,6 +17,8 @@ def eye_aspect_ratio(eye):
   ear = (A+B) / (2.0 * C)
   return ear
 
+# Get CMD Command
+
 ap = argparse.ArgumentParser()
 ap.add_argument("-p", "--shape-predictor", help = "path to facial landmark predictor")
 args = vars(ap.parse_args())
@@ -29,17 +27,12 @@ EYE_AR_THRESH = 0.3
 COUNTER = 0
 TOTAL = 0
 
-print("Loading Facial Landmark Predictor....")
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(args["shape_predictor"])
-
 (lStart, lEnd) = face_utils.FACIAL_LANDMARKS_IDXS[["left_eye"]
 (rStart, rEnd) = face_utils.FACIAL_LANDMARKS_IDXS[["right_eye"]
                                                  
-print("Starting Live Video Stream...")
 vs = VideoStream(src = 0).start()
-fileStream = False
-time.sleep(1.0)
 currentCount = 0
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
@@ -100,8 +93,24 @@ while True:
             
     else:
       continuous_counter = 0
-                                                  
-                                                  
+    
+    cv2.putText(frame, "Blinks: {}".format(TOTAL), (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+    cv2.putText(frame, "Left: {:.2f}".format(leftEAR), (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+    cv2.putText(frame, "Right: {:.2f}".format(rightEAR), (10, 70), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+    cv2.putText(frame, "EAR: {:.2f}".format(ear), (300, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+    cv2.putText(frame, "DANGER!!: {:.2f}".format(danger), (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
+    break
+
+  cv2.imshow("Frame", frame)
+  key = cv2.waitKey(1) & 0xFF
+
+  # if the `q` key was pressed, break from the loop
+  if key == ord("q"):
+    break
+
+cv2.destroyAllWindows()
+vs.stop()
+                                                 
                                                   
                                                   
                                             

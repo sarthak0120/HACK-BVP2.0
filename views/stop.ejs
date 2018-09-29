@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> BlogsApp is here!!</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.11/semantic.min.css"/>
+    <script type="text/javascript" src="howler.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .container.main{
+            margin-top: 7.0em;
+        }
+        h1{
+            margin-top: 3.0em;
+        }
+        i.icon{
+            font-size: 2.0em;
+        }
+    </style>
+ 
+</head>
+<body>
+<div class="ui fixed inverted menu">
+    <div class="ui container">
+        <div class="header item">
+            <i class="dashboard icon"></i>Blog Site
+        </div>
+        <a href="/" class="item">HOME</a>
+        <a href="/blogs/new" class="item">NEW POST</a>
+
+    </div>
+
+</div>
+
+    <div class= "ui main container segment">
+        <div class ="ui huge header">New Blog</div>
+       <button id='howler-play'>Play</button>
+<button id='howler-stop'>Stop</button>
+    </div>
+       <script>
+        $(document).ready(function(){
+        var howler_example = new Howl({
+  src: ['Digital-phone-ringing.mp3'],
+  volume: 0.8
+});
+
+        howler_example.play();
+  
+   
+
+    $("#howler-stop").on("click", function(){
+        howler_example.stop();
+    });
+
+      });
+    </script>
+</body>
+</html>

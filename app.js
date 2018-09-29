@@ -3,9 +3,17 @@ var express = require("express"),
     app       = express();
 const {PythonShell} = require("python-shell");
 var sys = require('sys');
+var player = require('play-sound')(opts = {});
 var spawn = require("child_process").spawn;
+/*var player = require('play-sound')({player: "C:/Users/sarth/Downloads/mplayer.exe"});
+ 
 
 
+var baudio = require('baudio');
+var play = require('audio-play'),
+    load = require('audio-loader');
+
+*/
 app.use(bodyParser.urlencoded({extended : true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname));
@@ -30,7 +38,14 @@ shell.on('message', function (message) {
     if(message=='1')
     {
         //alarm'
+      //  soundManager.url = '/path/to/swf-files/';
+
+    // create player instance
+// play now and callback when playend
+ 
        console.log("OH LOL!");
+
+      res.render("stop");
     }
  // res.render("result", {message: message, claim: claim, says:says});
 // console.log("hii");
@@ -38,6 +53,7 @@ shell.on('message', function (message) {
 });
 
 });
+
 app.listen(3000, "localhost", function(err){
     console.log("Server on duty, Mallady!");
 });

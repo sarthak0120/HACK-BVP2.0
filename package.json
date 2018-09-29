@@ -17,11 +17,17 @@
   },
   "homepage": "https://github.com/sarthak0120/HACK-BVP2.0#readme",
   "dependencies": {
+    "audio-loader": "^1.0.3",
+    "audio-play": "^2.2.1",
+    "baudio": "^2.1.2",
     "body-parser": "^1.18.3",
     "child_process": "^1.0.2",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "howler": "^2.0.15",
+    "play-sound": "^1.1.2",
     "python-shell": "^1.0.4",
+    "soundmanager2": "^2.97.20170602",
     "sys": "0.0.1"
   }
 }

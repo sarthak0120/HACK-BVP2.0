@@ -29,5 +29,9 @@
     "python-shell": "^1.0.4",
     "soundmanager2": "^2.97.20170602",
     "sys": "0.0.1"
+  },
+  "engines": {
+    "node": "9.10.1"
   }
+ 
 }

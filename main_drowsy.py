@@ -77,7 +77,7 @@ while True:
       if(continuous_counter>5):
         danger = 1
         print("1")
-        time.sleep(5)
+        time.sleep(3)
         sys.exit(0)
       COUNTER += 1
       TOTAL += 1    

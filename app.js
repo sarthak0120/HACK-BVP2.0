@@ -5,6 +5,7 @@ const {PythonShell} = require("python-shell");
 var sys = require('sys');
 var player = require('play-sound')(opts = {});
 var spawn = require("child_process").spawn;
+ const puretext = require('puretext');
 /*var player = require('play-sound')({player: "C:/Users/sarth/Downloads/mplayer.exe"});
  
 
@@ -53,7 +54,10 @@ shell.on('message', function (message) {
 });
 
 });
+app.post('/k1', function(req, res) {
+  res.send("hello");
 
+   });
 app.listen(3000, "localhost", function(err){
     console.log("Server on duty, Mallady!");
 });

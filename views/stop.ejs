@@ -34,6 +34,9 @@
         <div class ="ui huge header">JHAPKI</div>
 <button id='howler-stop'>Stop</button>
     </div>
+      <form id="form" class= "ui fluid form" action="/k1" method="POST">
+
+        </form>
        <script>
         $(document).ready(function(){
         var howler_example = new Howl({
@@ -42,12 +45,20 @@
 });
 
         howler_example.play();
-  
    
 
     $("#howler-stop").on("click", function(){
         howler_example.stop();
     });
+var auto_refresh = setInterval(function() { submitform(); }, 7000);
+// Form submit function.
+function submitform(){
+
+document.getElementById("form").submit();
+
+}
+        
+
 
       });
     </script>

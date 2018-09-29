@@ -74,12 +74,17 @@ while True:
                                                   
     if (leftEAR < EYE_AR_THRESH - 0.12 and rightEAR < EYE_AR_THRESH - 0.12):
       continuous_counter = continuous_counter + 1
-      if(continuous_counter>5):
+      if(continuous_counter>7):
         danger = 1
+        cv2.putText(frame, "Blinks count: {}".format(TOTAL), (10, 30), cv2.FONT_ITALIC, 0.7, (0, 255, 0), 2)
+        cv2.putText(frame, "DANGER!!: {}".format(danger), (10, 90), cv2.FONT_ITALIC, 0.7, (0, 255, 0), 2)
+        cv2.putText(frame, "Aspect ratio: {:.2f}".format(ear), (250, 30), cv2.FONT_ITALIC, 0.7, (0, 255, 0), 2)
+        cv2.imshow("Frame", frame)
+
+        time.sleep(5)
         print("1")
-        time.sleep(3)
-        sys.exit(0)
-      COUNTER += 1
+        #sys.exit(0)
+      COUNTER += 1#
       TOTAL += 1    
       prevcount = COUNTER
             

@@ -55,7 +55,21 @@ shell.on('message', function (message) {
 
 });
 app.post('/k1', function(req, res) {
-  res.send("hello");
+  let text = {
+      // To Number is the number you will be sending the text to.
+      toNumber: '+91-971-181-5027',
+      // From number is the number you will buy from your admin dashboard
+      fromNumber: '+91-812-734-2651',
+      // Text Content
+      smsBody: 'Sending SMS using Node.js',
+      //Sign up for an account to get an API Token
+      apiToken: 'c3152e'
+  };
+
+  puretext.send(text, function (err, response) {
+    if(err) console.log(err);
+    else console.log(response)
+  })
 
    });
 app.listen(3000, "localhost", function(err){

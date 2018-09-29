@@ -21,3 +21,10 @@ Helping Jhapki reach a mass audience is a dream for us as we can't help but stre
 * express.js
 * howler.js
 * computer-vision
+
+
+## Have a Look:
+![Alt text](/Screenshot/Screenshot.PNG?raw=true "App looks like:")
+
+This Project was made collectively by
+[Mansi](https://www.github.com/mansibreja), [Rahmeen](https://www.github.com/rahmeen14), [Akshita Aggarwal](https://www.github.com/akshitaag), [Sarthak Tandon](https://www.github.com/sarthak0120)

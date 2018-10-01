@@ -27,5 +27,5 @@ Helping Jhapki reach a mass audience is a dream for us as we can't help but stre
 ![Alt text](/Screenshot/Screenshot.PNG?raw=true "App looks like:")
 
 This Project was made collectively by
-[Mansi Breja](https://www.github.com/mansibreja), [Rahmeen Habib](https://www.github.com/rahmeen14), [Akshita Aggarwal](https://www.github.com/akshitaag), [Sarthak Tandon](https://www.github.com/sarthak0120) as a part of Hack@BVP2.0, September 2018.
+[Mansi Breja](https://www.github.com/mansibreja), [Rahmeen Habib](https://www.github.com/rahmeen14), [Akshita Aggarwal](https://www.github.com/akshitaag) and [Sarthak Tandon](https://www.github.com/sarthak0120) as a part of Hack@BVP2.0, September 2018.
 

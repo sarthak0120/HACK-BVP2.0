@@ -12,7 +12,8 @@ We used computer vision library (cv2) to detect a person's blink. The data about
 We are proud of the fact that this program can be deployed in real-time computation due to its low-overhead and high accuracy in detecting a person's blnk. Even one life saved is a matter of pride for us.
 
 ## What's next for Jhapki ?
-Helping Jhapki reach a mass audience is a dream for us as we can't help but stress the need for this product. Right now, only a handful of very high-end luxury cars like Tesla support this feature. Bringing it to an average driver on the highway would be a moment of pure elation for us.
+Helping Jhapki reach a mass audience is a dream for us as we can't help but stress the need for this product. Right now, only a handful of very high-end luxury cars like Tesla support this feature. Bringing it to an average driver on the highway would be a moment of pure elation for us. The rate of blinking after which the alarm goes off can be modified in the code.
+
 
 ## Built With
 * node.js
@@ -28,4 +29,3 @@ Helping Jhapki reach a mass audience is a dream for us as we can't help but stre
 
 This Project was made collectively by
 [Mansi Breja](https://www.github.com/mansibreja), [Rahmeen Habib](https://www.github.com/rahmeen14), [Akshita Aggarwal](https://www.github.com/akshitaag) and [Sarthak Tandon](https://www.github.com/sarthak0120) as a part of Hack@BVP2.0, September 2018.
-
